@@ -1,7 +1,9 @@
 ##grab the money
-import itertools
 
-counter = itertools.count()
+#make some counting tools to work with
+class Repeater:
+    def __init__(self, value):
+        self.value = value
 
-data = [100,200,400,800]
-
+    def __iter__(self):
+        return RepeaterIterator(self)
