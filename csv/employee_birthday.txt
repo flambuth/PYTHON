@@ -1,0 +1,4 @@
+name,department,birthday_month
+John Smith,Accounting,November
+Erica Meyers,IT,March
+Cosmo Seinfeld,HR,April

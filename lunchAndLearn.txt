@@ -1,0 +1,13 @@
+finally:
+	another addition to the try/except tools
+
+if p == 1:
+<<< whatever is in the block of code after finally. 	
+	return p
+elif p == 2:
+	return p
+elif p == 3:
+	return p
+
+finally:
+	print("This will be there!")
