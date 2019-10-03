@@ -35,6 +35,9 @@ def get_total_points(belts=ninja_belts):
 #        a 'message of the day
 
 
+#Need to make the except block raise an exception
+#Need to change the try block to return the Train {} or Chill.
+
 workout_schedule = {'Friday': 'Shoulders',
                     'Monday': 'Chest+biceps',
                     'Saturday': 'Rest',
