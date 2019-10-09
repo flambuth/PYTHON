@@ -14,8 +14,9 @@ with requests.Session() as s:
 def most_prolific_automaker(year):
     """Given year 'year' return the automaker that released
        the highest number of new car models"""
-    pass
-
+    x = [i['automaker'] for i in data if i['year']==year]
+    x_count = Counter(x)
+    return x_count.most_common()[0][0]
 
 def get_models(automaker, year):
     """Filter cars 'data' by 'automaker' and 'year',
@@ -23,30 +24,12 @@ def get_models(automaker, year):
     pass
 
 
-for i in data: 
-    ...:     automakers.append(i['automaker']) 
-    ...:     years.append(i['year']) 
-    ...:                      
-
-#Maybe zip them together
-years
-automakers
-x = list(zip(years,automakers))
-
-years = list(set(years))
-automakers = list(set(automakers))
-
-temp_list = []
-given_year = 2013
-#orders them by year
-for i in years: 
-    for j in x: 
-        if i == j[0]: 
-            print(i,j[1])
-            if j[0] == given_year
-                temp_list.append(j[1]) 
-#That list holds all the automanufacturers that had a new car in the given year
+x = [i['automaker'] for i in data if i['year']==2006] 
 #Will have to use a counter and pick the top result.
 
-col_count = Counter(temp_list) 
-print(col_count)              
+x_count = Counter(temp_list) 
+print(x_count)              
+
+#This method returns a list of tuples. First 0 is the top tuple's first position, which is the automaker
+#with the highest
+x_count.most_common()[0][0]                                            
