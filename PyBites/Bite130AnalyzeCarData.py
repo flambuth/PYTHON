@@ -14,6 +14,8 @@ with requests.Session() as s:
 def most_prolific_automaker(year):
     """Given year 'year' return the automaker that released
        the highest number of new car models"""
+# This list comprehension will make a repeating list of automakers that have have they year key be the one 
+# given by the function paratmer.
     x = [i['automaker'] for i in data if i['year']==year]
     x_count = Counter(x)
     return x_count.most_common()[0][0]
