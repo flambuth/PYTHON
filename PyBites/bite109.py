@@ -39,3 +39,20 @@ def get_workout_motd(day):
     else:
         return go_train.format(activity)
 
+#When I enter a paramter that will not be in the dictionary keys, it returns
+#the go_train variable, with None in the {}.
+
+def alt_get_workout_motd(day):
+    day = day.capitalize()
+    day = day.strip()
+    #print(workout_schedule['day'])
+
+    try:
+        activity = workout_schedule.get(day)
+        if activity == 'Rest':
+            return chill
+        else:
+            return go_train.format(activity)
+
+    except KeyError:
+        print(f"{day} is not in the schedule.")
