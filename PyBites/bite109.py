@@ -48,7 +48,7 @@ def alt_get_workout_motd(day):
     #print(workout_schedule['day'])
 
     try:
-        activity = workout_schedule.get(day)
+        activity = workout_schedule[day]
         if activity == 'Rest':
             return chill
         else:
