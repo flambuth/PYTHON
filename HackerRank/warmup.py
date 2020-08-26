@@ -35,5 +35,17 @@ def aVeryBigSum(ar1, ar2):
     return sum(ar2)
 
 #%%
-def aVeryBigSum(ar1, ar2):
-    return sum(ar2)
+def diagonalDifference(twoDarray):
+    length = len(twoDarray[0])
+    for i in range(length):
+        for j in range(length):
+            if i == j: 
+                print(blob[i][j])
+
+def diagonalOtherDifference(twoDarray):
+    length = len(twoDarray[0])
+    for i in range(length):
+        for j in range(length):
+            if (i+j) == (length-1): 
+                print(blob[i][j])
+                
