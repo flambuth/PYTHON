@@ -35,17 +35,32 @@ def aVeryBigSum(ar1, ar2):
     return sum(ar2)
 
 #%%
-def diagonalDifference(twoDarray):
+def diagonalFirstDifference(twoDarray):
     length = len(twoDarray[0])
     for i in range(length):
         for j in range(length):
             if i == j: 
-                print(blob[i][j])
+                print(twoDarray[i][j])
 
 def diagonalOtherDifference(twoDarray):
     length = len(twoDarray[0])
     for i in range(length):
         for j in range(length):
             if (i+j) == (length-1): 
-                print(blob[i][j])
+                print(twoDarray[i][j])
+
+def diagonalDifference(arr):
+    length = len(arr[0])
+    diags1 = []
+    diags2 = []
+    
+    for i in range(length):
+        for j in range(length):
+            if i == j: 
+                diags1.append(arr[i][j])
                 
+    for i in range(length):
+        for j in range(length):
+            if (i+j) == (length-1): 
+                diags2.append(arr[i][j])
+    return abs(sum(diags1) - sum(diags2))
